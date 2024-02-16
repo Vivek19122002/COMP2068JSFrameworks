@@ -1,0 +1,53 @@
+
+body, h1 {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 20px;
+        background-image: url('/images/bg3.jpg'); /* background image */
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-family: 'Arial', sans-serif;
+        box-sizing: border-box;
+        height: 100vh; 
+        display: flex;
+        align-items: top; 
+        justify-content: top;  
+}
+header {
+    padding: 200px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+header h1 { /* code for text */
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+img {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    border-color: aqua;
+    padding: 2px;
+    width: 200px;
+}
+info{ /*code for line bellow image*/
+    font-size:50px;
+    color:rgb(175, 218, 36);
+}
+h1 { /*code for h1 line*/
+    color: #f3ee9fb5; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.814);
+   
+}
+h2{ /*code for h2 line*/
+    color:white;
+    font-style: italic;
+}
+

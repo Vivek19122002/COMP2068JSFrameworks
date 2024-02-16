@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="/stylesheets/contact.css"> <!-- link of contact.css -->
+</head>
+
+<body>
+    <h1>Contact Me :</h1>
+    <form action="/submit-form" method="post" onsubmit="showMessage(event)"> <!-- button event handling -->
+        <label for="name">Name:</label> <!-- user name box -->
+        <input type="text" id="userName" name="name" required>
+        <label for="email">Email:</label> <!-- user email box -->
+        <input type="email" id="userEmail" name="email" required>
+        <label for="message">Message:</label> <!-- user message box -->
+        <textarea id="userMessage" name="message" rows="4" required></textarea>
+        <button type="submit">Submit</button> <!-- Button -->
+    </form>
+
+    <div id="thankYouMsg" style="display: none;">
+       <p> <h3>"Thank you for your message! We'll get back to you soon."</h3> </p>
+    </div>
+    <script>
+        function showMessage(event) 
+        {
+            event.preventDefault();
+            document.querySelector('form').style.display = 'none'; //code to hide form after submit 
+            document.getElementById('thankYouMsg').style.display = 'block'; //display the message.
+        }
+    </script>
+</body>
+
+</html>
