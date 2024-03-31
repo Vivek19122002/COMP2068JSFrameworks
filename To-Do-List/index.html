@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>To-Do List</h1>
+        <!-- Input fileld to get new to do list  -->
+        <input type="text" v-model="newTodo" @keyup.enter="addTodo">
+        
+        <!-- Displays already given to do list -->
+        <ul v-if="todos.length > 0">
+            <!-- displays the list -->
+            <li v-for="(todo, index) in filteredTodos" :key="index" :class="{ 'completed': todo.completed }">
+                <!-- code for checkbox-->
+                <input type="checkbox" v-model="todo.completed">
+                <!-- Display todo text -->
+                <span class="todo-text" @dblclick="editTodo(index)" v-if="!todo.editing">{{ todo.text }}</span>
+                <!-- Input field for editing todo -->
+                <input type="text" v-model="todo.text" @blur="saveTodo(index)" v-else>
+                <!-- code for button to delete todo -->
+                <button @click="removeTodo(index)">Delete</button>
+            </li>
+        </ul>
+        
+        <!-- Display message when no todos are left -->
+        <p v-else> No tasks left </p>
+        
+        <!-- Button to clear completed tasks -->
+        <button @click="clearCompleted" v-show="todos.some(todo => todo.completed)">Clear Completed</button>
+    </div>
+    
+    <!-- Vue.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    
+    <!-- JavaScript file containing Vue instance and logic -->
+    <script src="app.js"></script>
+</body>
+</html>

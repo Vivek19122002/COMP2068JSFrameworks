@@ -1,0 +1,68 @@
+/* Reset default styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container */
+#app {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Centered heading */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px; /* Added margin for spacing */
+}
+
+/* Input box for adding new to-do */
+input[type="text"] {
+    width: calc(100% - 20px); /* Adjusted width to be slightly smaller */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 0 auto 10px; /* Centered input box with bottom margin */
+    display: block; /* Ensures the input box is a block element */
+}
+
+/* Style the to-do list */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Individual to-do item */
+li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Delete button */
+button {
+    background-color: #ff5555;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for delete button */
+button:hover {
+    background-color: #ff3333;
+}
