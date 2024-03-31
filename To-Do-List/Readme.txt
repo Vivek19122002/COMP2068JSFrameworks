@@ -10,5 +10,3 @@ It allows users to add, edit, remove, and mark tasks as completed.
 - Remove tasks: Click on the "Delete" button next to a task to remove it from the list.
 - Mark tasks as completed: Check the checkbox next to a task to mark it as completed.
 - Clear completed tasks: Click on the "Clear Completed" button to remove all completed tasks from the list.
-
-## Github Link :
