@@ -1,0 +1,91 @@
+{{{header}}}
+{{{sidebar}}}
+<!-- BEGIN: Content-->
+<div class="app-content content ">
+  <div class="content-overlay"></div>
+  <div class="header-navbar-shadow"></div>
+  <div class="content-wrapper">
+    <div class="content-header row">
+      <div class="content-header-left col-md-9 col-12 mb-2">
+        <div class="row breadcrumbs-top">
+          <div class="col-12">
+            <h2 class="content-header-title float-left mb-0">Manage Recipe</h2>
+            <div class="breadcrumb-wrapper">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/home">Home</a>
+                </li>
+                <li class="breadcrumb-item active">Recipes</a>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{!-- <% if (success_message.length > 0) { %>
+      <div class="demo-spacing-0 col-6" style="margin-left: 220px;">
+        <div class="alert alert-success" role="alert">
+          <div class="alert-body"><strong> <%= success_message %> </strong></div>
+        </div>
+      </div>
+    <% } %> --}}
+
+    <div class="content-body">
+      <div class="row">
+        <div class="col-12">
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-12 mb-1 mb-lg-0" style="margin-left: 740px;">
+        <a href="/recipe/add"><button type="button" class="btn btn-primary btn-block">Add Recipe</button></a>
+      </div><br>
+      <!-- Basic table -->
+      <section id="basic-datatable">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <table id="table_id" class="table">
+                <thead align="center">
+                  <tr>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>cuisine</th>
+                    <th>ingredients</th>
+                    <th>cookTimeMinutes</th>
+                    <th>image</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody align="center">
+                  {{#each recipes}}
+                  <tr>
+                    <th>{{ math @index "+" 1 }}</th>
+                    <th>{{ name }}</th>
+                    <th>{{ cuisine }}</th>
+                    <th>{{ ingredients }}</th>
+                    <th>{{ cookTimeMinutes }}</th>
+                    <th>
+                      {{#if image}}
+                      <img src="../uploads/recipe/{{ image }}" class="img-fluid rounded" height="55px" width="55px">
+                      {{/if}}
+                    </th>
+                    <th>
+                      <a href="/recipe/edit/{{ _id }}" class="btn btn-warning btn-sm" data-toggle="tooltip" data-original-title="Edit"><i class="ficon" data-feather="edit"></i></a>
+                      <a href="/recipe/delete/{{ _id }}" data-toggle="tooltip" data-original-title="Delete" onclick="return confirm('Are you sure to delete this record ?');" class="btn btn-danger btn-sm"><i class="ficon" data-feather="trash-2"></i></a>
+                    </th>
+                  </tr>
+                  {{/each}}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+        <!--/ Basic table -->
+
+    </div>
+  </div>
+</div>
+<!-- END: Content-->
+
+{{{footer}}}

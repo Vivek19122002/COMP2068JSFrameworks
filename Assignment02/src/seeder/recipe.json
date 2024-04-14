@@ -1,0 +1,170 @@
+[
+  {
+    "name": "Classic Margherita Pizza",
+    "ingredients": [
+      "Pizza dough",
+      "Tomato sauce",
+      "Fresh mozzarella cheese",
+      "Fresh basil leaves",
+      "Olive oil",
+      "Salt and pepper to taste"
+    ],
+    "cookTimeMinutes": 15,
+    "difficulty": "Easy",
+    "cuisine": "Italian",
+    "image": "pizza.jpg"
+  },
+  {
+    "name": "Vegetarian Stir-Fry",
+    "ingredients": [
+      "Tofu, cubed",
+      "Broccoli florets",
+      "Carrots, sliced",
+      "Bell peppers, sliced",
+      "Soy sauce",
+      "Ginger, minced",
+      "Garlic, minced",
+      "Sesame oil",
+      "Cooked rice for serving"
+    ],
+    "cookTimeMinutes": 20,
+    "difficulty": "Medium",
+    "cuisine": "Asian",
+    "image": "pizza.jpg"
+  },
+  {
+    "name": "Chocolate Chip Cookies",
+    "ingredients": [
+      "All-purpose flour",
+      "Butter, softened",
+      "Brown sugar",
+      "White sugar",
+      "Eggs",
+      "Vanilla extract",
+      "Baking soda",
+      "Salt",
+      "Chocolate chips"
+    ],
+    "cookTimeMinutes": 10,
+    "difficulty": "Easy",
+    "cuisine": "American",
+    "image": "pizza.jpg"
+  },
+  {
+    "name": "Chicken Alfredo Pasta",
+    "ingredients": [
+      "Fettuccine pasta",
+      "Chicken breast, sliced",
+      "Heavy cream",
+      "Parmesan cheese, grated",
+      "Garlic, minced",
+      "Butter",
+      "Salt and pepper to taste",
+      "Fresh parsley for garnish"
+    ],
+    "cookTimeMinutes": 20,
+    "difficulty": "Medium",
+    "cuisine": "Italian",
+    "image": "pizza.jpg"
+  },
+  {
+    "name": "Mango Salsa Chicken",
+    "ingredients": [
+      "Chicken thighs",
+      "Mango, diced",
+      "Red onion, finely chopped",
+      "Cilantro, chopped",
+      "Lime juice",
+      "Jalapeño, minced",
+      "Salt and pepper to taste",
+      "Cooked rice for serving"
+    ],
+    "cookTimeMinutes": 25,
+    "difficulty": "Easy",
+    "cuisine": "Mexican",
+    "image": "pizza.jpg"
+  },
+  {
+    "name": "Quinoa Salad with Avocado",
+    "ingredients": [
+      "Quinoa, cooked",
+      "Avocado, diced",
+      "Cherry tomatoes, halved",
+      "Cucumber, diced",
+      "Red bell pepper, diced",
+      "Feta cheese, crumbled",
+      "Lemon vinaigrette dressing",
+      "Salt and pepper to taste"
+    ],
+    "cookTimeMinutes": 15,
+    "difficulty": "Easy",
+    "cuisine": "Mediterranean",
+    "image": "pizza.jpg"
+  },
+  {
+    "name": "Tomato Basil Bruschetta",
+    "ingredients": [
+      "Baguette, sliced",
+      "Tomatoes, diced",
+      "Fresh basil, chopped",
+      "Garlic cloves, minced",
+      "Balsamic glaze",
+      "Olive oil",
+      "Salt and pepper to taste"
+    ],
+    "cookTimeMinutes": 10,
+    "difficulty": "Easy",
+    "cuisine": "Italian",
+    "image": "pizza.jpg"
+  },
+  {
+    "name": "Beef and Broccoli Stir-Fry",
+    "ingredients": [
+      "Beef sirloin, thinly sliced",
+      "Broccoli florets",
+      "Soy sauce",
+      "Oyster sauce",
+      "Sesame oil",
+      "Garlic, minced",
+      "Ginger, minced",
+      "Cornstarch",
+      "Cooked white rice for serving"
+    ],
+    "cookTimeMinutes": 15,
+    "difficulty": "Medium",
+    "cuisine": "Asian",
+    "image": "pizza.jpg"
+  },
+  {
+    "name": "Caprese Salad",
+    "ingredients": [
+      "Tomatoes, sliced",
+      "Fresh mozzarella cheese, sliced",
+      "Fresh basil leaves",
+      "Balsamic glaze",
+      "Extra virgin olive oil",
+      "Salt and pepper to taste"
+    ],
+    "cookTimeMinutes": 20,
+    "difficulty": "Easy",
+    "cuisine": "Italian",
+    "image": "pizza.jpg"
+  },
+  {
+    "name": "Shrimp Scampi Pasta",
+    "ingredients": [
+      "Linguine pasta",
+      "Shrimp, peeled and deveined",
+      "Garlic, minced",
+      "White wine",
+      "Lemon juice",
+      "Red pepper flakes",
+      "Fresh parsley, chopped",
+      "Salt and pepper to taste"
+    ],
+    "cookTimeMinutes": 20,
+    "difficulty": "Medium",
+    "cuisine": "Italian",
+    "image": "pizza.jpg"
+  }
+]

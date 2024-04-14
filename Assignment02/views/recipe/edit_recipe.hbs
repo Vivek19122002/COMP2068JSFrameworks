@@ -1,0 +1,150 @@
+{{{header}}}
+{{{sidebar}}}
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const inputField = document.getElementById('ingredients-icon');
+    const tagContainer = document.getElementById('tag-container');
+
+    inputField.addEventListener('keydown', function(event) {
+        if (event.key === 'Tab' && inputField.value.trim() !== '') {
+            event.preventDefault(); // Prevent default tab action
+
+            const tag = document.createElement('span');
+            tag.classList.add('badge', 'badge-primary', 'mr-1');
+            tag.textContent = inputField.value.trim();
+            tagContainer.appendChild(tag);
+
+            inputField.value = ''; // Clear input field after creating tag
+        }
+    });
+
+    // Optional: Allow removing tags by clicking on them
+    tagContainer.addEventListener('click', function(event) {
+        if (event.target.classList.contains('badge')) {
+            event.target.remove();
+        }
+    });
+});
+
+</script>
+<!-- BEGIN: Content-->
+<div class="app-content content ">
+  <div class="content-overlay"></div>
+  <div class="header-navbar-shadow"></div>
+  <div class="content-wrapper">
+    <div class="content-header row">
+      <div class="content-header-left col-md-9 col-12 mb-2">
+        <div class="row breadcrumbs-top">
+          <div class="col-12">
+            <h2 class="content-header-title float-left mb-0">Manage Recipe</h2>
+            <div class="breadcrumb-wrapper">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/home">Home</a>
+                </li>
+                <li class="breadcrumb-item"><a href="/recipes">View Recipes</a>
+                </li>
+                <li class="breadcrumb-item active">Edit Recipe
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-body">      
+      <!-- Basic Vertical form layout section start -->
+      <section id="basic-vertical-layouts" style="margin-left: 220px;">
+        <div class="row">
+          <div class="col-8">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title" style="font-size: 30px;margin-left: 150px;">Edit Recipe</h4>
+              </div>
+              <div class="card-body">
+                <form class="form form-vertical" action="/recipe/edit/{{ recipe._id }}" method="POST" enctype="multipart/form-data" autocomplete="off">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label for="first-name-icon" style="font-size: 15px;">Recipe Name</label>
+                        <div class="input-group input-group-merge">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i data-feather="clipboard"></i></span>
+                          </div>
+                          <input type="text" id="first-name-icon" class="form-control" name="recipe_name" value="{{ recipe.name }}" placeholder="Recipe Name" pattern="[A-Za-z]{3, }" title="Enter valid Recipe Name" required />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label for="cook-time-icon" style="font-size: 15px;">Cook Time (minutes)</label>
+                        <div class="input-group input-group-merge">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i data-feather="clipboard"></i></span>
+                          </div>
+                          <input type="number" id="cook-time-icon" class="form-control" name="cook_time" value="{{ recipe.cookTimeMinutes }}" placeholder="Cook Time" pattern="{1, }" title="Enter valid Cook Time" required />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label for="difficulty-icon" style="font-size: 15px;">Difficulty</label>
+                        <div class="input-group input-group-merge">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i data-feather="clipboard"></i></span>
+                          </div>
+                          <input type="text" id="difficulty-icon" class="form-control" name="difficulty" value="{{ recipe.difficulty }}" placeholder="Difficulty" pattern="[A-Za-z]{3, }" title="Enter valid Difficulty" required />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label for="cuisine-icon" style="font-size: 15px;">Cuisine</label>
+                        <div class="input-group input-group-merge">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i data-feather="clipboard"></i></span>
+                          </div>
+                          <input type="text" id="cuisine-icon" class="form-control" name="cuisine" value="{{ recipe.cuisine }}" placeholder="Recipe Cuisine" pattern="[A-Za-z]{3, }" title="Enter valid Cuisine" required />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="ingredients-icon" style="font-size: 15px;">Ingredients</label>
+                            <div class="input-group input-group-merge">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i data-feather="clipboard"></i></span>
+                                </div>
+                                <input type="text" id="ingredients-icon" class="form-control" name="ingredients" value="{{ recipe.ingredients }}" placeholder="Ingredients" />
+                            </div>
+                            {{!-- <div id="tag-container"></div> --}}
+                        </div>
+                    </div>
+                    {{!-- <div class="col-12">
+                      <div class="form-group">
+                        <label for="password-icon" style="font-size: 15px;">Photo</label>
+                        <div class="input-group input-group-merge">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i data-feather="image"></i></span>
+                          </div>
+                          <input type="file" id="password-icon" class="form-control" name="image" required />
+                        </div>
+                      </div>
+                    </div> --}}
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary mr-1">Submit</button>
+                      <button type="reset" class="btn btn-outline-secondary">Reset</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Basic Vertical form layout section end -->
+    </div>
+  </div>
+</div>
+<!-- END: Content-->
+
+{{{footer}}}
